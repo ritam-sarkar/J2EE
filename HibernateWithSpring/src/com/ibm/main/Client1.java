@@ -42,8 +42,8 @@ public class Client1 {
 		//tx.createCart();
 		//tx.printCartInfo();
 		//tx.printItemInfo();
-		tx.createAddress();
-		//tx.printaddress();
+		//tx.createAddress();
+		tx.printaddress();
 		//tx.createVehichles();
 		
 		

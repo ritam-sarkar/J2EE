@@ -5,7 +5,6 @@ package com.ibm.model;
 
 import java.util.Date;
 
-import javax.persistence.Cacheable;
 
 /**
  * @author Ritam
@@ -36,7 +35,6 @@ import org.hibernate.annotations.Type;
  */
 @Entity
 @Table(name="person")
-@Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Person {
 
