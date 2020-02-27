@@ -13,6 +13,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 /**
  * @author Ritam
  *
@@ -22,7 +24,8 @@ public class StudentServiceDelegate
 {
     @Autowired
     RestTemplate restTemplate;
-     
+    
+    @HystrixCommand(fallbackMethod = "fallBackStudentData")
     public String callStudentServiceAndGetData(String schoolname)
     {
         System.out.println("Consul Demo - Getting School details for " + schoolname);
@@ -38,5 +41,9 @@ public class StudentServiceDelegate
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+    
+    public String fallBackStudentData(String schoolname) {
+    	return "No student data available";
     }
 }
