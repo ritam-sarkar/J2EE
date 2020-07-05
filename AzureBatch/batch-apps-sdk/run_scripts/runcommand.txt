@@ -1,0 +1,11 @@
+# Run in windows
+cmd /c "java -cp AZ_BATCH_APP_PACKAGE_runner#1.0.0/runner/_code/Runner-1.0.0-SNAPSHOT.jar:AZ_BATCH_APP_PACKAGE_runner#1.0.0/runner/_code/lib/* com.sarkar.main.Runnermain"
+
+#Run in linux
+/bin/bash -c "java -cp AZ_BATCH_APP_PACKAGE_runner_1_0_0/runner/_code/Runner-1.0.0-SNAPSHOT.jar:AZ_BATCH_APP_PACKAGE_runner_1_0_0/runner/_code/lib/* com.sarkar.main.Runnermain"
+
+#Run in linux
+/bin/bash -c "sudo apt-get install openjdk-8-jdk"
+/bin/bash -c "java -cp ${!APP_PACKAGE_LOCATION}/runner/_code/Runner-1.0.0-SNAPSHOT.jar:${!APP_PACKAGE_LOCATION}/runner/_code/lib/* com.sarkar.main.Runnermain"
+
+ 

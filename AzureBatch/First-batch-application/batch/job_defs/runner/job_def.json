@@ -1,0 +1,8 @@
+{
+    "id": "runner",
+    "runtime": "java",
+    "jar_name": "runner-1.0.0-SNAPSHOT.jar",
+    "main_class": "com.sarkar.main.RunnerMain",
+    "lib_path": "../../../source/java/runner/distribution/lib",
+    "code_path": "../../../source/java/runner/target"
+}
